@@ -7,3 +7,8 @@ void LoadCharacterGraph(){
 	h_chara[1]=LoadGraph("res\\jorry_t.png");
 	h_chara[2]=LoadGraph("res\\muri.png");
 }
+
+void LoadGUIGraph(){
+	textbox=LoadGraph("res\\gui\\wakuwakusan.png");
+
+}

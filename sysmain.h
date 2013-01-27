@@ -5,3 +5,4 @@ extern int Cred, Cblack, Cblue, Cwhite;
 extern int Fsmall,Fnorm;
 extern int stage;
 extern int h_chara[50];
+extern int textbox;

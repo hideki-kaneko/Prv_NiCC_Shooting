@@ -77,5 +77,5 @@ void TekiBullet_1(){
 
 void ShowNobel_1(){
 	SetDrawChara(0,1);
-	WriteNobelString("テストメッセージです。");
+	WriteNobelString("testメッセージです。");
 }
