@@ -1,1 +1,1 @@
-extern void LoadCharacterGraph();
+﻿extern void LoadCharacterGraph();

@@ -1,9 +1,9 @@
-/*
+﻿/*
 stage1.cpp
 
-�����X�e�[�W�ɑΉ������邽�߂́A�e�֐��𕪎U�����鎎�݂ł��B
-�G�̈ړ��E�`��E�e���˂������ɒ�`���܂��B���̃t�@�C������֐����ĂԂɂ́Ainclude����w�b�_��extern����K�v������܂��B
-�܂��A�e�̕ϐ��Ƃ������L���Ă�̂ŏՓ˖h�~��namespace�g���Ă܂����A�g�������w�^�Ȃ̂ňӖ��𐬂��Ă��܂���B
+複数ステージに対応させるための、各関数を分散させる試みです。
+敵の移動・描画・弾発射をここに定義します。他のファイルから関数を呼ぶには、includeするヘッダでexternする必要があります。
+また、弾の変数とかを共有してるので衝突防止にnamespace使ってますが、使い方がヘタなので意味を成していません。
 */
 
 
@@ -48,7 +48,6 @@ void TekiBullet_1(){
 	static float angle;
 
 	for(int i=0;i<100;i++){
-		
 
 		if(tb[i].avail==false){
 			dist=2+GetRand(4);
@@ -78,5 +77,5 @@ void TekiBullet_1(){
 
 void ShowNobel_1(){
 	SetDrawChara(0,1);
-	WriteNobelString("�e�X�g���b�Z�[�W�ł��B");
+	WriteNobelString("テストメッセージです。");
 }

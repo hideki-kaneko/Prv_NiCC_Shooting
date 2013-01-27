@@ -1,2 +1,2 @@
-extern int StartScreen();
+﻿extern int StartScreen();
 extern void ShowNobel();

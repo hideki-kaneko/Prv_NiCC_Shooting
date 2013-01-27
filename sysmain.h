@@ -1,4 +1,4 @@
-
+﻿
 extern unsigned short int frame;
 extern char key[256];
 extern int Cred, Cblack, Cblue, Cwhite;

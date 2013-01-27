@@ -1,8 +1,8 @@
-/*
+ï»¿/*
 text.cpp
-ƒmƒxƒ‹ƒQ[ƒ€•—‚Ì•\¦‚ğs‚¤ŠÖ”‚ğ’è‹`
+ãƒãƒ™ãƒ«ã‚²ãƒ¼ãƒ é¢¨ã®è¡¨ç¤ºã‚’è¡Œã†é–¢æ•°ã‚’å®šç¾©
 
-QlF http://karetta.jp/book-node/game-programming/235056
+å‚è€ƒï¼š http://karetta.jp/book-node/game-programming/235056
 */
 
 #include "common.h"
@@ -111,7 +111,7 @@ void WriteNobelString(char* str){
 	}
 }
 
-//‚±‚±‚©‚ç‰º‚ÍƒSƒ~‚Ì‚½‚Ü‚èê---------------
+//ã“ã“ã‹ã‚‰ä¸‹ã¯ã‚´ãƒŸã®ãŸã¾ã‚Šå ´---------------
 
 void WriteNobelString(char* str, char* str2){
 	int line=0;

@@ -1,9 +1,4 @@
-﻿/*
-----AAを貼る＆表示するには----
-ツール＞オプション＞環境＞フォントおよび色＞テキストエディター　でフォントを MSPゴシックに変更。
-なんか見にくい気がしますが、そのうち慣れます。人生ってそういうもんです。
-*/
-
+﻿
 /*
 main.cpp
 
@@ -38,8 +33,6 @@ A.
 
 */
 
-
-
 #include "common.h"
 
 int tmp;
@@ -67,8 +60,8 @@ using namespace sys;
 void Move();
 void TBulletMove();
 void JBulletMove();
-bool Jatari();
-bool Tatari(); //呪われません
+bool isJikiHit();
+bool isTekiHit();
 void Draw();
 
 //メインループ---------------------------------
@@ -81,14 +74,14 @@ int main(){
 
 	Move();
 	JBulletMove();
-	if(Jatari()==true){
+	if(isJikiHit()==true){
 		jiki.life.now-=1;
 		jiki.damage=true;
 	}else jiki.damage=false;
 	TBulletMove();
 	if(jiki.life.now <=0) return 1;
 	if(boss[0].life.now<=0) return 2;
-	if(Tatari()==true){
+	if(isTekiHit()==true){
 		boss[0].damage=true;
 		boss[0].life.now-=1;
 	}else boss[0].damage=false;
@@ -128,8 +121,7 @@ void Draw(){
 		}
 	}
 
-	//HUD
-	//色定義終了
+	//GUI
 	DrawBox(framesize.right,0,640,480,GetColor(255,255,255),true);
 	DrawBox(0,0,640*boss[0].life.now/boss[0].life.max,10,Cred,true);
 	DrawFormatString(framesize.right+20,20,Cred,"弾幕STG.Prototype");
@@ -152,8 +144,6 @@ void Draw(){
 }
 
 void Move(){
-
-
 	//自機移動
 	if(key[KEY_INPUT_LSHIFT]==1){
 		jiki.speed=3;
@@ -232,9 +222,8 @@ void JBulletMove(){
 
 }
 
-bool Jatari(){
+bool isJikiHit(){
 	//自機当たり判定
-
 	static bool result;
 	result=false;
 	for(int i=0;i<=199;i++){
@@ -246,7 +235,7 @@ bool Jatari(){
 	return result;
 }
 
-bool Tatari(){
+bool isTekiHit(){
 	switch(stage){
 	case 1:
 		return TekiHit_1();

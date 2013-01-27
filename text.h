@@ -1,4 +1,4 @@
-extern void WriteString(char* str,  int start, int len, int x, int y, int line);
+﻿extern void WriteString(char* str,  int start, int len, int x, int y, int line);
 extern void WriteNobelString(char* str);
 extern void SetDrawChara(int num, int side);
 

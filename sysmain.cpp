@@ -1,43 +1,43 @@
-/*
+﻿/*
 sysmain.cpp
 
-������WinMain�֐�����X�^�[�g���܂��B
-main.cpp��main�ŕ`�悵�����e���A���[�v���ƂɃt���b�v�E�������܂��B
-main�ł́AWaitKey�ȂǂŃ��[�v����E�o���Ȃ��ꍇ������ScreenFlip���s���K�v�͂���܂���B
+ここのWinMain関数からスタートします。
+main.cppのmainで描画した内容を、ループごとにフリップ・消去します。
+mainでは、WaitKeyなどでループから脱出しない場合を除きScreenFlipを行う必要はありません。
 */
 
 /*
 
-�� void�^�ȊO�̊֐������ꍇ�̒��ӓ_ ��
+○ void型以外の関数を作る場合の注意点 ○
 
 
-�@�@�@)�.�Q�l�Q�l__,.�C.�._�l�Q�l�Q�l
-�@ ���L �@�@ �l�@�ԁ@���@�ā@���@�I�@�@�@��
-�@�@ �� v'�܁Rr -��Q ,r v'�܁Rr ' �܁Rr
-// // //�^::�@<�@�@ �Q,�m�M' �A�R��Q�@�m �@;;;�R�@ //
-///// /::::�@�@�@�iy��'�j�M�R) ( �L�iy��'�j�@ �@�@;;|�@�@/
-// //,|:::�@�@�@�@�@�i (�@/�@�@�@�@�R) �j+�@�@�@ �@;| /
-/ // |:::�@ �@�@�@+�@ ) �j|~�P�P~.|�i (�@�@ �@ �@ ;;;|// ////
-/// :|::�@�@�@�@ �@�@�i (||||! i: |||! !| |) �j�@ �@ �@ ;;;|// ///
-////|::::�@�@�@�@+�@�@ U | |||| !! !!||| :U�@�@�@;;; ;;;|�@///
-////|:::::�@�@�@�@�@�@�@| |!!||l ll|| !! !!| | �@�@�@;;;;;;|�@////
-// / �R:::::�@�@ �@ �@�@| !�@|| |�@||!!|�@�@�@�@;;;;;;/// //
-// // �T::::::::�@:�@�@�@| �M�[----�|'�@|�Q_�^///
+　　　)､.＿人＿人__,.イ.､._人＿人＿人
+　 ＜´ 　　 値　返　し　て　っ　！　　　＞
+　　 ⌒ v'⌒ヽr -､＿ ,r v'⌒ヽr ' ⌒ヽr
+// // //／::　<　　 ＿,ノ｀' 、ヽ､＿　ノ 　;;;ヽ　 //
+///// /::::　　　（y○'）｀ヽ) ( ´（y○'）　 　　;;|　　/
+// //,|:::　　　　　（ (　/　　　　ヽ) ）+　　　 　;| /
+/ // |:::　 　　　+　 ) ）|~￣￣~.|（ (　　 　 　 ;;;|// ////
+/// :|::　　　　 　　（ (||||! i: |||! !| |) ）　 　 　 ;;;|// ///
+////|::::　　　　+　　 U | |||| !! !!||| :U　　　;;; ;;;|　///
+////|:::::　　　　　　　| |!!||l ll|| !! !!| | 　　　;;;;;;|　////
+// / ヽ:::::　　 　 　　| !　|| |　||!!|　　　　;;;;;;/// //
+// // ゝ::::::::　:　　　| ｀ー----－'　|＿_／///
 */
 
 #include "common.h"
 
-//�O���[�o���ϐ�
-unsigned short int frame=0; //�t���[���p�ϐ�
+//グローバル変数
+unsigned short int frame=0; //フレーム用変数
 double fps=0.0; //FPS
-char key[256]; //�L�[�̓��͏�Ԋi�[
-int Cred, Cblack, Cblue, Cwhite; //�F��`
+char key[256]; //キーの入力状態格納
+int Cred, Cblack, Cblue, Cwhite; //色定義
 int Fsmall,Fnorm;
-int stage=1; //�X�e�[�W�ԍ�
+int stage=1; //ステージ番号
 
 int h_chara[50];
 
-//�֐��v���g�^�C�v�錾
+//関数プロトタイプ宣言
 double GetFPS(); 
 void SetColor();
 void SetFont();
@@ -45,15 +45,15 @@ void SetFont();
 
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine, int nCmdShow ){
 
-	//������-----
-	srand((unsigned)time(NULL)); //�����̃V�[�h�l�������_���Ɏw��
+	//初期化-----
+	srand((unsigned)time(NULL)); //乱数のシード値をランダムに指定
 	ChangeWindowMode(true);
 	if(DxLib_Init()==-1) return -1;
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetColor();
 	SetFont();
 	LoadCharacterGraph();
-	//�������I��-----
+	//初期化終了-----
 
 	title:
 	switch(StartScreen()){
@@ -66,34 +66,33 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 		goto end;
 		break;
 	default:
-		DrawFormatString(200,220,Cblue,"ERROR: �t���O����`����ĂȂ��悤�c");
+		DrawFormatString(200,220,Cblue,"ERROR: フラグが定義されてないよう…");
 		ScreenFlip();
 		WaitKey();
 		goto end;
 		break;
 	}
 
-	//���C�����[�v
+	//メインループ
 	start:
 
 	while(ProcessMessage()==0 && CheckHitKey(KEY_INPUT_ESCAPE)==0){
 
 		fps=GetFPS();
-
 		GetHitKeyStateAll(key);
 		ClearDrawScreen();
 
-		//main�֐����Ăяo���A�Ԃ�l��0�ȊO�Ȃ牽�����s
+		//main関数を呼び出し、返り値が0以外なら何か実行
 		switch(main()){
 		case 1:
-			DrawFormatString(320,200,GetColor(255,255,255),"����");
+			DrawFormatString(320,200,GetColor(255,255,255),"死んだ");
 			ScreenFlip();
 			WaitKey();
 			var_init();
 			goto start;
 			break;
 		case 2:
-			DrawFormatString(320,220,GetColor(255,255,255),"������");
+			DrawFormatString(320,220,GetColor(255,255,255),"すごい");
 			ScreenFlip();
 			WaitKey();
 			var_init();
@@ -108,13 +107,13 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 
 end:
 
-	//�I������
+	//終了処理
 	DxLib_End();
 	return 0;
 }
 
 double GetFPS(){
-	//FPS���擾����֐�
+	//FPSを取得する関数
 	static double result=0;
 	static double tmptime[2];
 
@@ -145,15 +144,15 @@ void SetFont(){
 
 /*
 
-�����̈ꌾ
+今日の一言
 
-�E2012/11/24	�Ȃ񂩁@�˂ނ�
-�E2012/11/25	�����Q���n���X���ɍ��󂪖���炵��
-�E2012/11/26	�A������Ă������ĂȂ��ċ�����
-�E2012/11/28	�f�o�b�O����jiki.life.max�Ƃ����E�H�b�`�ɒǉ����悤�Ƃ�����CX0017�G���[�f���ꂽ
-�E2012/11/29	�������ȈՐ���N�[���[�����������ȁB����ϐ�����āi�Ȃ�ƂȂ��j������ˁI
-�E2012/12/08	�ς����񂪁@�������@�ł��@������́@�߂�ǂ�
-�E2012/12/11 �C���e���Z���X���Ԉ���ĂȂ��Ƃ����G���[�w�E���Ă����B�h�W���q�Ȃ񂾂�
-�E2013/01/23 ���Ȃ�VS2012�̔z�F�́I�HIDE�܂Ń��_��UI���ӎ����Ȃ��ł���I�I
-�E2013/01/27 GitHub�ɃT�C���A�b�v���܂���
+・2012/11/24	なんか　ねむい
+・2012/11/25	ランゲルハンス島に財宝が眠るらしい
+・2012/11/26	帰ったら米が炊けてなくて泣いた
+・2012/11/28	デバッグ中にjiki.life.maxとかをウォッチに追加しようとしたらCX0017エラー吐かれた
+・2012/11/29	部員が簡易水冷クーラー買ったそうな。やっぱ水冷って（なんとなく）いいよね！
+・2012/12/08	ぱそこんが　おもい　でも　いじるの　めんどい
+・2012/12/11 インテリセンスが間違ってないとこをエラー指摘してきた。ドジっ子なんだね
+・2013/01/23 何なんだVS2012の配色は！？IDEまでモダンUIを意識しないでくれ！！
+・GitHubにサインアップしてみました
 */
