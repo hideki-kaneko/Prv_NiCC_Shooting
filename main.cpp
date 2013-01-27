@@ -1,40 +1,40 @@
-/*
-----AA‚ð“\‚é••\Ž¦‚·‚é‚É‚Í----
-ƒc[ƒ‹„ƒIƒvƒVƒ‡ƒ“„ŠÂ‹«„ƒtƒHƒ“ƒg‚¨‚æ‚ÑF„ƒeƒLƒXƒgƒGƒfƒBƒ^[@‚ÅƒtƒHƒ“ƒg‚ð MSPƒSƒVƒbƒN‚É•ÏXB
-‚È‚ñ‚©Œ©‚É‚­‚¢‹C‚ª‚µ‚Ü‚·‚ªA‚»‚Ì‚¤‚¿Šµ‚ê‚Ü‚·Bl¶‚Á‚Ä‚»‚¤‚¢‚¤‚à‚ñ‚Å‚·B
+ï»¿/*
+----AAã‚’è²¼ã‚‹ï¼†è¡¨ç¤ºã™ã‚‹ã«ã¯----
+ãƒ„ãƒ¼ãƒ«ï¼žã‚ªãƒ—ã‚·ãƒ§ãƒ³ï¼žç’°å¢ƒï¼žãƒ•ã‚©ãƒ³ãƒˆãŠã‚ˆã³è‰²ï¼žãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã€€ã§ãƒ•ã‚©ãƒ³ãƒˆã‚’ MSPã‚´ã‚·ãƒƒã‚¯ã«å¤‰æ›´ã€‚
+ãªã‚“ã‹è¦‹ã«ãã„æ°—ãŒã—ã¾ã™ãŒã€ãã®ã†ã¡æ…£ã‚Œã¾ã™ã€‚äººç”Ÿã£ã¦ãã†ã„ã†ã‚‚ã‚“ã§ã™ã€‚
 */
 
 /*
 main.cpp
 
-Šî–{“I‚Èˆ—‚ð‘‚«‚Ü‚·B
-sysmain.cpp‚ÌWinMainŠÖ”‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+åŸºæœ¬çš„ãªå‡¦ç†ã‚’æ›¸ãã¾ã™ã€‚
+sysmain.cppã®WinMainé–¢æ•°ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 */
 
 /*
 
-Q.ƒR[ƒh‚Ì‘‚«•û‚ª“ˆê‚³‚ê‚Ä‚È‚­‚Ä•ª‚©‚è‚É‚­‚¢‚Å‚·
+Q.ã‚³ãƒ¼ãƒ‰ã®æ›¸ãæ–¹ãŒçµ±ä¸€ã•ã‚Œã¦ãªãã¦åˆ†ã‹ã‚Šã«ãã„ã§ã™
 
 A.
-@':,@@@@ ',@@@_____,,.. -] ''"LPPM"'' °@¤.,@@@@@@@@ @^
-@@':,@@@@',@@ „'@L@@@@@@@@@@@@@MR.@@@@@@ /@@@@’m
-@@@':,@@@@ ^@@@@@@@@@@@@@@@@@ @ R.@@@@ ,'@@    @ ‚Á
-@@@@':,@@ ,:' ^@@ ^@ @,'L@@@@@@@ R.@@ @ ':,/Ti@ i.@@‚»@‚Ä
-.@_@@@@,' /@@@/@ ,'@@!@@@@ @;@ @',@ R__@^::::| |@|@@ ‚ñ@‚é
-@@@_@ / ,'@@@,'!@ /!@@!@ @;@@/!@@@i@ u:::|'L::::::::| |@.!.@ ‚È  ‚í
-@@@@ Ú__,!@@ / !ƒ¤v_,,./| @ /!@/@!@@ Ê!@|__vƒ:::::vv@|.@@ ‚±  ‚æ
-M"''@ ¤..,,_@ !@ /@,§7L, `iR|@/@|R¤vÆƒC¤@|@ !@|^R¤vv @|.@@ ‚Æ
-@@@@@@@i,^Ú²@i„£@i.@Ú' @ '±L!_v ƒnR|@@@|@@@| Ú@@@ ! !
-„Ÿ--@ @ @/@@ !@ T- '@@@@ @@! @@ !@!@@@|@@@|@@MR.
-@@@@@@/@ @7/l/l/@@@¤@@ @@`'°] '_ƒm!@@@|@ i@ |@ @@M ' °---
-,. -„Ÿ„Ÿ-'¤@@,l@@@@Mi`§°-- ¤@@/l/l/l |@@@ !.@|@ |
-@@@@@@ R.¿@ `: ¤. @@Ú'@@@@', @ u@,/|@@@ |@ !@ |
-@‚Æ@@¡@@i@@/°Å= ¤ '¤@@@@É@@,.ƒC,¶@@@ !@ |@ |
-@‚±@@C  @.|Í./|^ƒŒ‚ÖM„-r@ =ÆiL¤.,_@|@ i@ Ê@ !@,'
-@‚ë@@³@@ !@@@@ _,.ƒCLR.7@@ ^@ /:::|@/Ú'@ Ú'Ú'
-@‚È@@‚µ@@ | @@^7:::::!@@›‚n'L@@/::::::Ú'R.
-@‚Ì@  ‚Ä@@.|@ /@ /:::::::ƒŒ'/ƒ€R.@@/::::::::/ @ R.
-@! !@@‚é@@ ! ./@ ,':::::::::::!/@ƒn:::::ML:::::::::::;'@@@@',
+ã€€':,ã€€ã€€ã€€ã€€ ',ã€€ã€€ã€€_____,,.. -â€ ''"Â´ï¿£ï¿£ï½€"'' ï½°ã€€ï½¤.,ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ ã€€ï¼
+ã€€ã€€':,ã€€ã€€ã€€ã€€',ã€€ã€€ ï¼ž'ã€€Â´ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ï½€ãƒ½.ã€€ã€€ã€€ã€€ã€€ã€€ /ã€€ã€€ã€€ã€€çŸ¥
+ã€€ã€€ã€€':,ã€€ã€€ã€€ã€€ ï¼ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ ã€€ ãƒ½.ã€€ã€€ã€€ã€€ ,'ã€€ã€€    ã€€ ã£
+ã€€ã€€ã€€ã€€':,ã€€ã€€ ,:' ï¼ã€€ã€€ ï¼ã€€ ã€€,'Â´ã€€ã€€ã€€ã€€ã€€ã€€ã€€ ãƒ½.ã€€ã€€ ã€€ ':,/Tiã€€ i.ã€€ã€€ãã€€ã¦
+.ã€€ï¼¼ã€€ã€€ã€€ã€€,' /ã€€ã€€ã€€/ã€€ ,'ã€€ã€€!ã€€ã€€ã€€ã€€ ã€€;ã€€ ã€€',ã€€ ãƒ½__ã€€ï¼::::| |ã€€|ã€€ã€€ ã‚“ã€€ã‚‹
+ã€€ã€€ã€€ï¼¼ã€€ / ,'ã€€ã€€ã€€,'!ã€€ /!ã€€ã€€!ã€€ ã€€;ã€€ã€€/!ã€€ã€€ã€€iã€€ ã€Œ:::|'Â´::::::::| |ã€€.!.ã€€ ãª  ã‚
+ã€€ã€€ã€€ã€€ âˆ __,!ã€€ã€€ / !ãƒ¡ï½¤ã€_,,./| ã€€ /!ã€€/ã€€!ã€€ã€€ ï¾Š!ã€€|__ã€ï¼œ:::::ã€ã€ã€€|.ã€€ã€€ ã“  ã‚ˆ
+ï½€"''ã€€ ï½¤..,,_ã€€ !ã€€ /ã€€,ï½§7Â´, `iãƒ½|ã€€/ã€€|ãƒ½ï½¤ã€ï¾†ã‚¤ï½¤ã€€|ã€€ !ã€€|^ãƒ½ï½¤ã€ã€ ã€€|.ã€€ã€€ ã¨
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€i,ï¼ï¾šï½²ã€€iâ”˜ã€€i.ã€€ï¾š' ã€€ 'ï½±Â´!_ã€ ãƒãƒ½|ã€€ã€€ã€€|ã€€ã€€ã€€| âˆ ã€€ã€€ã€€ ! !
+â”€--ã€€ ã€€ ã€€/ã€€ã€€ !ã€€ ã‚- 'ã€€ã€€ã€€ã€€ ã€€ã€€! ã€€ã€€ !ã€€!ã€€ã€€ã€€|ã€€ã€€ã€€|ã€€ã€€ï½€ãƒ½.
+ã€€ã€€ã€€ã€€ã€€ã€€/ã€€ ã€€7/l/l/ã€€ã€€ã€€ï½¤ã€€ã€€ ã€€ã€€`'ï½°â€ '_ãƒŽ!ã€€ã€€ã€€|ã€€ iã€€ |ã€€ ã€€ã€€ï½€ ' ï½°---
+,. -â”€â”€-'ï½¤ã€€ã€€,äººã€€ã€€ã€€ã€€ï½€i`ï½§ï½°-- ï½¤ã€€ã€€/l/l/l |ã€€ã€€ã€€ !.ã€€|ã€€ |
+ã€€ã€€ã€€ã€€ã€€ã€€ ãƒ½.ï½¿ã€€ `: ï½¤. ã€€ã€€ï¾š'ã€€ã€€ã€€ã€€', ã€€ uã€€,/|ã€€ã€€ã€€ |ã€€ !ã€€ |
+ã€€ã¨ã€€ã€€ä»Šã€€ã€€iã€€ã€€/ï½°ï¾…= ï½¤ 'ï½¤ã€€ã€€ã€€ã€€ï¾‰ã€€ã€€,.ã‚¤,ï½¶ã€€ã€€ã€€ !ã€€ |ã€€ |
+ã€€ã“ã€€ã€€ä¿®  ã€€.|ï¾./|ï¼ãƒ¬ã¸ï½€ï¼ž-rã€€ =ï¾†iÂ´ï½¤.,_ã€€|ã€€ iã€€ ï¾Šã€€ !ã€€,'
+ã€€ã‚ã€€ã€€æ­£ã€€ã€€ !ã€€ã€€ã€€ã€€ _,.ã‚¤Â´ãƒ½.7ã€€ã€€ ï¼ã€€ /:::|ã€€/ï¾š'ã€€ ï¾š'ï¾š'
+ã€€ãªã€€ã€€ã—ã€€ã€€ | ã€€ã€€ï¼7:::::!ã€€ã€€â—‹ï¼¯'Â´ã€€ã€€/::::::ï¾š'ãƒ½.
+ã€€ã®ã€€  ã¦ã€€ã€€.|ã€€ /ã€€ /:::::::ãƒ¬'/ãƒ ãƒ½.ã€€ã€€/::::::::/ ã€€ ãƒ½.
+ã€€! !ã€€ã€€ã‚‹ã€€ã€€ ! ./ã€€ ,':::::::::::!/ã€€ãƒ:::::ï½€Â´:::::::::::;'ã€€ã€€ã€€ã€€',
 
 */
 
@@ -46,10 +46,10 @@ int tmp;
 bool talkphase=true;
 
 namespace chara{
-	bullet_t tb[200]; //“G’e
-	bullet_t tmb[200]; //’eˆÚ“®
-	bullet_t jb[200]; //Ž©‹@’e
-	bullet_t jmb[200]; //Žg‚Á‚Ä‚È‚¢
+	bullet_t tb[200]; //æ•µå¼¾
+	bullet_t tmb[200]; //å¼¾ç§»å‹•
+	bullet_t jb[200]; //è‡ªæ©Ÿå¼¾
+	bullet_t jmb[200]; //ä½¿ã£ã¦ãªã„
 	jiki_t jiki={320,400,4,5,5,false,false};
 	teki_t boss[20]={
 		{320,30,100,100,false},
@@ -63,15 +63,15 @@ namespace sys{
 using namespace chara;
 using namespace sys;
 
-//ŠÖ”ƒvƒƒgƒ^ƒCƒvéŒ¾
+//é–¢æ•°ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 void Move();
 void TBulletMove();
 void JBulletMove();
 bool Jatari();
-bool Tatari(); //Žô‚í‚ê‚Ü‚¹‚ñ
+bool Tatari(); //å‘ªã‚ã‚Œã¾ã›ã‚“
 void Draw();
 
-//ƒƒCƒ“ƒ‹[ƒv---------------------------------
+//ãƒ¡ã‚¤ãƒ³ãƒ«ãƒ¼ãƒ—---------------------------------
 int main(){
 
 	if(talkphase==true){
@@ -103,20 +103,20 @@ int main(){
 
 
 void Draw(){
-	//ƒ{ƒX
+	//ãƒœã‚¹
 	switch(stage){
 	case 1:
 		TekiDraw_1(boss[0].x,boss[0].y,boss[0].damage);
 		break;
 	}
-	//Ž©‹@
+	//è‡ªæ©Ÿ
 	DrawBox(jiki.x-10,jiki.y-10,jiki.x+10,jiki.y+10,GetColor(255,255,255),true);
 	if(jiki.damage==true) DrawBox(jiki.x-10,jiki.y-10,jiki.x+10,jiki.y+10,Cred,true);
 	if(jiki.ahantei==true){
 		DrawCircle(jiki.x,jiki.y,2,Cred,true);
 	}
 
-	//’e
+	//å¼¾
 	for(int i=0;i<200;i++){
 		if(tb[i].avail==true){
 			DrawCircle(tb[i].x,tb[i].y,3,Cblue,true);
@@ -129,24 +129,24 @@ void Draw(){
 	}
 
 	//HUD
-	//F’è‹`I—¹
+	//è‰²å®šç¾©çµ‚äº†
 	DrawBox(framesize.right,0,640,480,GetColor(255,255,255),true);
 	DrawBox(0,0,640*boss[0].life.now/boss[0].life.max,10,Cred,true);
-	DrawFormatString(framesize.right+20,20,Cred,"’e–‹STG.Prototype");
-	DrawFormatString(framesize.right+20,100,Cblack,"‚¨‘O‚Ì‚â‚é‹CF%d",jiki.life.now);
-	DrawFormatString(framesize.right+20,120,Cblack,"ƒ{ƒ€FŽg‚¦‚Ü‚¹‚ñ");
-	DrawFormatString(framesize.right+20,140,Cblack,"ScoreF‚·‚²‚¢");
-	DrawFormatString(framesize.right+20,160,Cblack,"HiScoreF’m‚ç‚È‚¢‚Å‚·");
+	DrawFormatString(framesize.right+20,20,Cred,"å¼¾å¹•STG.Prototype");
+	DrawFormatString(framesize.right+20,100,Cblack,"ãŠå‰ã®ã‚„ã‚‹æ°—ï¼š%d",jiki.life.now);
+	DrawFormatString(framesize.right+20,120,Cblack,"ãƒœãƒ ï¼šä½¿ãˆã¾ã›ã‚“");
+	DrawFormatString(framesize.right+20,140,Cblack,"Scoreï¼šã™ã”ã„");
+	DrawFormatString(framesize.right+20,160,Cblack,"HiScoreï¼šçŸ¥ã‚‰ãªã„ã§ã™");
 
-	DrawFormatString(framesize.right+20,180,Cblack,"À•WF(%d,%d)",jiki.x,jiki.y);
-	DrawFormatString(framesize.right+20,200,Cblack,"ƒAƒNƒeƒBƒu‚È’e:%d/100",tmp);
+	DrawFormatString(framesize.right+20,180,Cblack,"åº§æ¨™ï¼š(%d,%d)",jiki.x,jiki.y);
+	DrawFormatString(framesize.right+20,200,Cblack,"ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªå¼¾:%d/100",tmp);
 
-	DrawFormatString(framesize.right+20,240,Cblue,"ˆÚ“®F•ûŒü·°(¼ÌÄ‚Å½Û°)");
-	DrawFormatString(framesize.right+20,260,Cblue,"ƒVƒ‡ƒbƒgFZ");
-	DrawFormatString(framesize.right+20,280,Cblue,"‚â‚ß‚éFESC");
+	DrawFormatString(framesize.right+20,240,Cblue,"ç§»å‹•ï¼šæ–¹å‘ï½·ï½°(ï½¼ï¾Œï¾„ã§ï½½ï¾›ï½°)");
+	DrawFormatString(framesize.right+20,260,Cblue,"ã‚·ãƒ§ãƒƒãƒˆï¼šZ");
+	DrawFormatString(framesize.right+20,280,Cblue,"ã‚„ã‚ã‚‹ï¼šESC");
 
-	DrawFormatString(framesize.right+20,300,Cblack,"“G‚Ì‚â‚é‹CF%d",boss[0].life.now);
-	DrawFormatString(framesize.right+20,340,Cred,"frameF%d",frame);
+	DrawFormatString(framesize.right+20,300,Cblack,"æ•µã®ã‚„ã‚‹æ°—ï¼š%d",boss[0].life.now);
+	DrawFormatString(framesize.right+20,340,Cred,"frameï¼š%d",frame);
 	
 
 }
@@ -154,7 +154,7 @@ void Draw(){
 void Move(){
 
 
-	//Ž©‹@ˆÚ“®
+	//è‡ªæ©Ÿç§»å‹•
 	if(key[KEY_INPUT_LSHIFT]==1){
 		jiki.speed=3;
 		jiki.ahantei=true;
@@ -175,7 +175,7 @@ void Move(){
 		jiki.y+=jiki.speed;
 	}
 	
-	//“GˆÚ“®
+	//æ•µç§»å‹•
 	switch(stage){
 	case 1:
 		TekiMove_1(&boss[0].x,&boss[0].y);
@@ -183,7 +183,7 @@ void Move(){
 
 	}
 
-	//Ž©‹@‰æ–ÊŠOˆ—
+	//è‡ªæ©Ÿç”»é¢å¤–å‡¦ç†
 	if(jiki.x>framesize.right) jiki.x=framesize.right;
 	if(jiki.x<framesize.left) jiki.x=framesize.left;
 	if(jiki.y>framesize.bottom) jiki.y=framesize.bottom;
@@ -193,7 +193,7 @@ void Move(){
 
 void TBulletMove(){
 
-	//“G’e”­ŽË
+	//æ•µå¼¾ç™ºå°„
 	switch(stage){
 	case 1:
 		TekiBullet_1();
@@ -204,7 +204,7 @@ void TBulletMove(){
 }
 
 void JBulletMove(){
-	//Ž©‹@’e”­ŽËŠÖ”
+	//è‡ªæ©Ÿå¼¾ç™ºå°„é–¢æ•°
 	static int max=0;
 
 	if(key[KEY_INPUT_Z]==1 && frame%2==1){
@@ -233,7 +233,7 @@ void JBulletMove(){
 }
 
 bool Jatari(){
-	//Ž©‹@“–‚½‚è”»’è
+	//è‡ªæ©Ÿå½“ãŸã‚Šåˆ¤å®š
 
 	static bool result;
 	result=false;
@@ -259,12 +259,12 @@ bool Tatari(){
 }
 
 void var_init(){
-	//•Ï”‰Šú‰»
+	//å¤‰æ•°åˆæœŸåŒ–
 
 	jiki.x=320,jiki.y=400;
 	boss[0].x=320,boss[0].y=30;
 	jiki.speed=4;
-	jiki.ahantei=false; /*“–‚½‚è”»’è•\Ž¦ƒtƒ‰ƒO*/
+	jiki.ahantei=false; /*å½“ãŸã‚Šåˆ¤å®šè¡¨ç¤ºãƒ•ãƒ©ã‚°*/
 	jiki.life.now=jiki.life.max;
 	boss[0].life.now=boss[0].life.max;
 
@@ -279,25 +279,25 @@ void var_init(){
 }
 
 /*
-ˆ¤‚µ‚Ìƒyƒbƒg‚Ö•ù‚®
+æ„›ã—ã®ãƒšãƒƒãƒˆã¸æ§ã
 
-ƒ‹[ƒtƒ@ƒXIƒ‹[ƒtƒ@ƒXIƒ‹[ƒtƒ@ƒXIƒ‹[ƒtƒ@ƒX‚£‚£‚¤‚¤‚¤‚í‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ñIII
-‚ ‚Ÿ‚ ‚ ‚ ‚ c‚ ‚ c‚ ‚Á‚ ‚Á[I‚ ‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ IIIƒ‹[ƒtƒ@ƒXƒ‹[ƒtƒ@ƒXƒ‹[ƒtƒ@ƒX‚£‚¤‚¤‚Ÿ‚í‚Ÿ‚ ‚ ‚ ‚ III
-‚ ‚ŸƒNƒ“ƒJƒNƒ“ƒJIƒNƒ“ƒJƒNƒ“ƒJIƒX[ƒn[ƒX[ƒn[IƒX[ƒn[ƒX[ƒn[I‚¢‚¢“õ‚¢‚¾‚È‚Ÿc‚­‚ñ‚­‚ñ
-‚ñ‚Í‚Ÿ‚ÁIƒ‹[ƒtƒ@ƒX‚½‚ñ‚Ìƒuƒ‰ƒbƒhƒŒƒbƒh‚Ì“ª‚ðƒNƒ“ƒJƒNƒ“ƒJ‚µ‚½‚¢‚¨IƒNƒ“ƒJƒNƒ“ƒJI‚ ‚Ÿ‚ II
-ŠÔˆá‚¦‚½Iƒ‚ƒtƒ‚ƒt‚µ‚½‚¢‚¨Iƒ‚ƒtƒ‚ƒtIƒ‚ƒtƒ‚ƒtI•E•Eƒ‚ƒtƒ‚ƒtIƒJƒŠƒJƒŠƒ‚ƒtƒ‚ƒtc‚«‚ã‚ñ‚«‚ã‚ñ‚«‚ã‚¢II
-ŽÊ^‚Ìƒ‹[ƒtƒ@ƒX‚½‚ñ‚©‚í‚¢‚©‚Á‚½‚æ‚£II‚ ‚Ÿ‚Ÿ‚ ‚ c‚ ‚ ‚ c‚ ‚Á‚ ‚Ÿ‚ ‚ ‚ ‚ II‚Ó‚Ÿ‚Ÿ‚ ‚ ‚ ‚ñ‚ñ‚ÁII
-ƒtƒgƒAƒS‚ªŽÔ‚ÌCMo‰‰‚µ‚Ä—Ç‚©‚Á‚½‚Ëƒ‹[ƒtƒ@ƒX‚½‚ñI‚ ‚Ÿ‚ ‚ ‚ ‚ ‚ I‚©‚í‚¢‚¢Iƒ‹[ƒtƒ@ƒX‚½‚ñI‚©‚í‚¢‚¢I‚ ‚Á‚ ‚ ‚Ÿ‚ ‚ I
-ƒn[ƒlƒX‚à”­”„‚³‚ê‚ÄŠð‚µc‚¢‚â‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ III‚É‚á‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ñII‚¬‚á‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ II
-‚®‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ IIIŽU•à‚È‚ñ‚ÄŒ»ŽÀ‚¶‚á‚È‚¢IIII‚ cˆÓŽv‘a’Ê‚àƒXƒLƒ“ƒVƒbƒv‚à‚æ‚­l‚¦‚½‚çc
-ƒ‹ [ ƒt ƒ@ ƒX ‚¿ ‚á ‚ñ ‚Í Œ»ŽÀ ‚¶ ‚á ‚È ‚¢H‚É‚á‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ñII‚¤‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ II
-‚»‚ñ‚È‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ II‚¢‚â‚Ÿ‚Ÿ‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ II‚Í‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ ‚ñIIƒŒƒvƒ645‚Ÿ‚ ‚ ‚ ‚ II
-‚±‚ÌI‚¿‚«‚µ‚å[I‚â‚ß‚Ä‚â‚éIIŒ»ŽÀ‚È‚ñ‚©‚â‚ßc‚Äc‚¦IHŒ©c‚Ä‚éHŽÊ^‚Ìƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª–l‚ðŒ©‚Ä‚éH
-jpg‚Ìƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª–l‚ðŒ©‚Ä‚é‚¼Iƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª–l‚ðŒ©‚Ä‚é‚¼I…‘…‚Ìƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª–l‚ðŒ©‚Ä‚é‚¼II
-Žè‚Ì‚Ð‚ç‚Ìƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª–l‚É˜b‚µ‚©‚¯‚Ä‚é‚¼III‚æ‚©‚Á‚½c¢‚Ì’†‚Ü‚¾‚Ü‚¾ŽÌ‚Ä‚½ƒ‚ƒ“‚¶‚á‚È‚¢‚ñ‚¾‚Ë‚ÁI
-‚¢‚â‚Á‚Ù‚§‚¨‚¨‚¨‚¨‚¨‚¨‚¨III–l‚É‚Íƒ‹[ƒtƒ@ƒX‚¿‚á‚ñ‚ª‚¢‚éII‚â‚Á‚½‚æƒŒƒIƒpII‚Ð‚Æ‚è‚Å‚Å‚«‚é‚à‚ñIII
-‚ AƒuƒƒO‚Ìƒ‹[ƒtƒ@ƒX‚¿‚á‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ñII‚¢‚â‚Ÿ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ ‚ IIII
-‚ ‚Á‚ ‚ñ‚ ‚ ‚Á‚ ‚ ‚ñ‚ ƒˆ[ƒƒbƒpƒCƒGƒRƒIƒƒM‚¡‚¢IIƒRAƒR[ƒ“ƒXƒl[ƒNIIƒRƒ‚ƒhƒIƒIƒgƒJƒQ‚¥‚¦‚¦‚¦‚¦‚¦‚¦IIIƒOƒŠ[ƒ“ƒCƒOƒAƒi‚Ÿ‚ ‚ ‚ II
-‚¤‚¤‚Á‚¤‚£‚¤‚¤II‰´‚Ì‘z‚¢‚æƒ‹[ƒtƒ@ƒX‚Ö“Í‚¯IIƒŒƒvƒ645‚Ìƒ‹[ƒtƒ@ƒX‚Ö“Í‚¯I
+ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã…ã…ã†ã†ã†ã‚ãã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚“ï¼ï¼ï¼
+ã‚ãã‚ã‚ã‚ã‚â€¦ã‚ã‚â€¦ã‚ã£ã‚ã£ãƒ¼ï¼ã‚ãã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã…ã†ã†ãã‚ãã‚ã‚ã‚ã‚ï¼ï¼ï¼
+ã‚ãã‚¯ãƒ³ã‚«ã‚¯ãƒ³ã‚«ï¼ã‚¯ãƒ³ã‚«ã‚¯ãƒ³ã‚«ï¼ã‚¹ãƒ¼ãƒãƒ¼ã‚¹ãƒ¼ãƒãƒ¼ï¼ã‚¹ãƒ¼ãƒãƒ¼ã‚¹ãƒ¼ãƒãƒ¼ï¼ã„ã„åŒ‚ã„ã ãªãâ€¦ãã‚“ãã‚“
+ã‚“ã¯ãã£ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãŸã‚“ã®ãƒ–ãƒ©ãƒƒãƒ‰ãƒ¬ãƒƒãƒ‰ã®é ­ã‚’ã‚¯ãƒ³ã‚«ã‚¯ãƒ³ã‚«ã—ãŸã„ãŠï¼ã‚¯ãƒ³ã‚«ã‚¯ãƒ³ã‚«ï¼ã‚ãã‚ï¼ï¼
+é–“é•ãˆãŸï¼ãƒ¢ãƒ•ãƒ¢ãƒ•ã—ãŸã„ãŠï¼ãƒ¢ãƒ•ãƒ¢ãƒ•ï¼ãƒ¢ãƒ•ãƒ¢ãƒ•ï¼é«­é«­ãƒ¢ãƒ•ãƒ¢ãƒ•ï¼ã‚«ãƒªã‚«ãƒªãƒ¢ãƒ•ãƒ¢ãƒ•â€¦ãã‚…ã‚“ãã‚…ã‚“ãã‚…ã„ï¼ï¼
+å†™çœŸã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãŸã‚“ã‹ã‚ã„ã‹ã£ãŸã‚ˆã…ï¼ï¼ã‚ããã‚ã‚â€¦ã‚ã‚ã‚â€¦ã‚ã£ã‚ãã‚ã‚ã‚ã‚ï¼ï¼ãµããã‚ã‚ã‚ã‚“ã‚“ã£ï¼ï¼
+ãƒ•ãƒˆã‚¢ã‚´ãŒè»Šã®CMå‡ºæ¼”ã—ã¦è‰¯ã‹ã£ãŸã­ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãŸã‚“ï¼ã‚ãã‚ã‚ã‚ã‚ã‚ï¼ã‹ã‚ã„ã„ï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ãŸã‚“ï¼ã‹ã‚ã„ã„ï¼ã‚ã£ã‚ã‚ãã‚ã‚ï¼
+ãƒãƒ¼ãƒã‚¹ã‚‚ç™ºå£²ã•ã‚Œã¦å¬‰ã—â€¦ã„ã‚„ãã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ï¼ã«ã‚ƒã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚“ï¼ï¼ãŽã‚ƒã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼
+ãã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ï¼æ•£æ­©ãªã‚“ã¦ç¾å®Ÿã˜ã‚ƒãªã„ï¼ï¼ï¼ï¼ã‚â€¦æ„æ€ç–Žé€šã‚‚ã‚¹ã‚­ãƒ³ã‚·ãƒƒãƒ—ã‚‚ã‚ˆãè€ƒãˆãŸã‚‰â€¦
+ãƒ« ãƒ¼ ãƒ• ã‚¡ ã‚¹ ã¡ ã‚ƒ ã‚“ ã¯ ç¾å®Ÿ ã˜ ã‚ƒ ãª ã„ï¼Ÿã«ã‚ƒã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚“ï¼ï¼ã†ãã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼
+ãã‚“ãªãã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ã„ã‚„ãããã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ã¯ãã‚ã‚ã‚ã‚ã‚ã‚ã‚“ï¼ï¼ãƒ¬ãƒ—ãƒ­645ãã‚ã‚ã‚ã‚ï¼ï¼
+ã“ã®ï¼ã¡ãã—ã‚‡ãƒ¼ï¼ã‚„ã‚ã¦ã‚„ã‚‹ï¼ï¼ç¾å®Ÿãªã‚“ã‹ã‚„ã‚â€¦ã¦â€¦ãˆï¼ï¼Ÿè¦‹â€¦ã¦ã‚‹ï¼Ÿå†™çœŸã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒåƒ•ã‚’è¦‹ã¦ã‚‹ï¼Ÿ
+jpgã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒåƒ•ã‚’è¦‹ã¦ã‚‹ãžï¼ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒåƒ•ã‚’è¦‹ã¦ã‚‹ãžï¼æ°´æ§½ã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒåƒ•ã‚’è¦‹ã¦ã‚‹ãžï¼ï¼
+æ‰‹ã®ã²ã‚‰ã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒåƒ•ã«è©±ã—ã‹ã‘ã¦ã‚‹ãžï¼ï¼ï¼ã‚ˆã‹ã£ãŸâ€¦ä¸–ã®ä¸­ã¾ã ã¾ã æ¨ã¦ãŸãƒ¢ãƒ³ã˜ã‚ƒãªã„ã‚“ã ã­ã£ï¼
+ã„ã‚„ã£ã»ã‰ãŠãŠãŠãŠãŠãŠãŠï¼ï¼ï¼åƒ•ã«ã¯ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚“ãŒã„ã‚‹ï¼ï¼ã‚„ã£ãŸã‚ˆãƒ¬ã‚ªãƒ‘ï¼ï¼ã²ã¨ã‚Šã§ã§ãã‚‹ã‚‚ã‚“ï¼ï¼ï¼
+ã‚ã€ãƒ–ãƒ­ã‚°ã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¡ã‚ƒã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚“ï¼ï¼ã„ã‚„ãã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ã‚ï¼ï¼ï¼ï¼
+ã‚ã£ã‚ã‚“ã‚ã‚ã£ã‚ã‚ã‚“ã‚ãƒ¨ãƒ¼ãƒ­ãƒƒãƒ‘ã‚¤ã‚¨ã‚³ã‚ªãƒ­ã‚®ãƒã„ï¼ï¼ã‚³ã€ã‚³ãƒ¼ãƒ³ã‚¹ãƒãƒ¼ã‚¯ï¼ï¼ã‚³ãƒ¢ãƒ‰ã‚ªã‚ªãƒˆã‚«ã‚²ã‡ãˆãˆãˆãˆãˆãˆï¼ï¼ï¼ã‚°ãƒªãƒ¼ãƒ³ã‚¤ã‚°ã‚¢ãƒŠãã‚ã‚ã‚ï¼ï¼
+ã†ã†ã£ã†ã…ã†ã†ï¼ï¼ä¿ºã®æƒ³ã„ã‚ˆãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¸å±Šã‘ï¼ï¼ãƒ¬ãƒ—ãƒ­645ã®ãƒ«ãƒ¼ãƒ•ã‚¡ã‚¹ã¸å±Šã‘ï¼
 */
 
