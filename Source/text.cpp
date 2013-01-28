@@ -21,13 +21,13 @@ void DrawTextBox(){
 void DrawCharaGraph(int num){
 	switch(num){
 	case 1:
-		DrawGraph(400,50,h_chara[0],true);
+		DrawGraph(400,50,graph::chara[0],true);
 		break;
 	case 2:
-		DrawGraph(50,50,h_chara[1],true);
+		DrawGraph(50,50,graph::chara[1],true);
 		break;
 	case 3:
-		DrawGraph(200,50,h_chara[2],true);
+		DrawGraph(200,50,graph::chara[2],true);
 		break;
 	}
 }
@@ -87,7 +87,7 @@ void WriteNobelString(char* str){
 
 		ClearDrawScreen();
 		DrawCharaGraph(chara_num);
-		DrawGraph(0,0,textbox,true);
+		DrawGraph(0,0,graph::textbox,true);
 		//DrawTextBox();
 
 		if(i!=0 && i%MSG_MAX_LEN==0){

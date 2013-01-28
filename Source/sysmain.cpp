@@ -16,9 +16,6 @@ int Cred, Cblack, Cblue, Cwhite;
 int Fsmall,Fnorm;
 int stage=1; //ステージ番号
 
-int h_chara[50];
-int textbox;
-
 //関数プロトタイプ宣言
 double GetFPS(); 
 void SetColor();
@@ -34,8 +31,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetColor();
 	SetFont();
-	LoadCharacterGraph();
-	LoadGUIGraph();
+	LoadGraphics();
 	//初期化終了-----
 
 	title:

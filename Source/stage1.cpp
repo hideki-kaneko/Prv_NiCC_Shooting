@@ -14,7 +14,7 @@ using namespace chara;
 using namespace sys;
 
 void TekiMove_1(int *x,int *y){
-
+	boss[0].y=70;
 	if(*x>framesize.right+30){
 		*x=framesize.left-30;
 	}else if(*x<framesize.left-30){
@@ -27,6 +27,7 @@ void TekiMove_1(int *x,int *y){
 
 void TekiDraw_1(int x,int y,bool flag){
 	DrawBox(x-30,y-15,x+30,y+15,Cred,true);
+	DrawGraph(x-72,y-72,graph::compterve,true);
 	if(flag==true) DrawBox(x-30,y-15,x+30,y+15,GetColor(255,255,255),true);
 
 }
