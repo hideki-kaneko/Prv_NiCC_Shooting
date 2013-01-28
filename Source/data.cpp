@@ -11,17 +11,17 @@ using namespace graph;
 
 void LoadGraphics(){
 	//gui
-	textbox=LoadGraph("bin\\gui\\wakuwakusan.png");
+	textbox=LoadGraph("res\\gui\\wakuwakusan.png");
 
 	//craft
-	hdmaru[0]=LoadGraph("bin\\craft\\hodakamaru.png");
-	hdmaru[1]=LoadGraph("bin\\craft\\hodakamaru_left.png");
-	hdmaru[2]=LoadGraph("bin\\craft\\hodakamaru_right.png");
-	compterve=LoadGraph("bin\\craft\\COM_P_TERVE_03.png");
+	hdmaru[0]=LoadGraph("res\\craft\\hodakamaru.png");
+	hdmaru[1]=LoadGraph("res\\craft\\hodakamaru_left.png");
+	hdmaru[2]=LoadGraph("res\\craft\\hodakamaru_right.png");
+	compterve=LoadGraph("res\\craft\\COM_P_TERVE_03.png");
 
 	//character
-	chara[0]=LoadGraph("bin\\null_i.png");
-	chara[1]=LoadGraph("bin\\jorry_t.png");
-	chara[2]=LoadGraph("bin\\muri.png");
+	chara[0]=LoadGraph("res\\null_i.png");
+	chara[1]=LoadGraph("res\\jorry_t.png");
+	chara[2]=LoadGraph("res\\muri.png");
 
 }

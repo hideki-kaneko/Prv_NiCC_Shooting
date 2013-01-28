@@ -21,7 +21,7 @@ int StartScreen(){
 	char key[256];
 	int sel=0;
 	int decision=-2;
-	int title_h=LoadGraph("bin\\gui\\title.png");
+	int title_h=LoadGraph("res\\gui\\title.png");
 	bool past_push=false;
 	int ELEMNUM=5;
 	int STRLINE=400;
