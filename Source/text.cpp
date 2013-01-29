@@ -86,6 +86,7 @@ void WriteNobelString(char* str){
 	for(int i=0; str[i]!='\0' && CheckHitKey(KEY_INPUT_LCONTROL)==0 ; i++){
 
 		ClearDrawScreen();
+		DrawGraph(0,0,graph::back[0],true);
 		DrawCharaGraph(chara_num);
 		DrawGraph(0,0,graph::textbox,true);
 		//DrawTextBox();

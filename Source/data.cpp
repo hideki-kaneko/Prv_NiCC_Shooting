@@ -6,12 +6,16 @@ namespace graph{
 	int hdmaru[3];
 	int compterve;
 	int textbox;
+	int back[10];
 }
 using namespace graph;
 
 void LoadGraphics(){
 	//gui
-	textbox=LoadGraph("res\\gui\\wakuwakusan.png");
+	textbox=LoadGraph("res\\gui\\wakuwaku.png");
+	
+	//background
+	back[0]=LoadGraph("res\\background\\back_beta.png");
 
 	//craft
 	hdmaru[0]=LoadGraph("res\\craft\\hodakamaru.png");

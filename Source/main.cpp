@@ -41,7 +41,7 @@ void Draw();
 
 //メインループ---------------------------------
 int main(){
-
+	DrawGraph(0,0,graph::back[0],true);
 	if(talkphase==true){
 		ShowNobel();
 		talkphase=false;
