@@ -78,5 +78,6 @@ void TekiBullet_1(){
 
 void ShowNobel_1(){
 	SetDrawChara(0,1);
-	WriteNobelString("宇宙戦艦穂高丸、発進！！　地球に迫る謎の宇宙船を、問答無用で破壊するのだ！");
+	WriteNobelString("宇宙戦艦穂高丸、発進！！");
+	WriteNobelString("地球に迫る謎の宇宙船を、問答無用で破壊するのだ！");
 }

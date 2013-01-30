@@ -12,6 +12,12 @@ sysmain.cppのWinMain関数から呼び出されます。
 int active_bullets;
 bool talkphase=true;
 
+typedef struct{
+	life_t life;
+	bool isDamage;
+}shield_t;
+shield_t shield={4,4,false};
+
 namespace chara{
 	bullet_t tb[200]; //敵弾
 	bullet_t tmb[200]; //弾移動
@@ -38,10 +44,12 @@ void JBulletMove();
 bool isJikiHit();
 bool isTekiHit();
 void Draw();
+void JikiDamage(int DamageValue);
 
 //メインループ---------------------------------
 int main(){
 	DrawGraph(0,0,graph::back[0],true);
+
 	if(talkphase==true){
 		ShowNobel();
 		talkphase=false;
@@ -50,9 +58,14 @@ int main(){
 	Move();
 	JBulletMove();
 	if(isJikiHit()==true){
-		jiki.life.now-=1;
+		//jiki.life.now-=1;
+		JikiDamage(1);
 		jiki.damage=true;
-	}else jiki.damage=false;
+		shield.isDamage=true;
+	}else{
+		jiki.damage=false;
+		shield.isDamage=false;
+	}
 	TBulletMove();
 	if(jiki.life.now <=0) return 1;
 	if(boss[0].life.now<=0) return 2;
@@ -83,6 +96,19 @@ void Draw(){
 	} else if(key[KEY_INPUT_RIGHT]==1){
 		DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[2],true);
 	} else DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[0],true);
+	
+	//シールド
+	if(shield.life.now > 0){
+		if(shield.isDamage==false){
+			DrawCircle(jiki.x,jiki.y,70,GetColor(255-255*(float)shield.life.now/(float)shield.life.max,0,0+255*(float)shield.life.now/(float)shield.life.max),false);
+		} else {
+			DrawCircle(jiki.x,jiki.y,68,Cwhite,false);
+		}
+	}
+
+	//自機体力
+	DrawBox(jiki.x-40,jiki.y+55,jiki.x+40,jiki.y+60,GetColor(255,255,255),false);
+	DrawBox(jiki.x-40,jiki.y+55,jiki.x-40+80*(float)jiki.life.now/(float)jiki.life.max,jiki.y+60,GetColor(255,255,255),true);
 
 	if(jiki.damage==true) DrawBox(jiki.x-10,jiki.y-10,jiki.x+10,jiki.y+10,Cred,true);
 	if(jiki.ahantei==true){
@@ -235,6 +261,7 @@ void var_init(){
 	jiki.speed=4;
 	jiki.ahantei=false; /*当たり判定表示フラグ*/
 	jiki.life.now=jiki.life.max;
+	shield.life.now=shield.life.max;
 	boss[0].life.now=boss[0].life.max;
 
 	for(int i=0;i<200;i++){
@@ -247,9 +274,18 @@ void var_init(){
 	}
 }
 
+void JikiDamage(int dmg){
+	if(shield.life.now-dmg <= 0){
+		jiki.life.now-=dmg-shield.life.now;
+		shield.life.now=0;
+	} else {
+		shield.life.now-=dmg;
+	}
+}
+
 /*
 
-Q.コードの書き方が統一されてなくて分かりにくいです
+Q.コードの書き方が汚いです
 
 A.
 　':,　　　　 ',　　　_____,,.. -‐ ''"´￣￣｀"'' ｰ　､.,　　　　　　　　 　／
