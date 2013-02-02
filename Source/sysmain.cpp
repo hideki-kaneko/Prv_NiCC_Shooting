@@ -12,9 +12,10 @@ mainでは、WaitKeyなどでループから脱出しない場合を除きScreen
 unsigned short int frame=0; //フレーム用変数
 double fps=0.0; //FPS
 char key[256]; //キーの入力状態格納
-int Cred, Cblack, Cblue, Cwhite;
+int Cred, Cblack, Cblue, Cgreen, Cwhite;
 int Fsmall,Fnorm;
 int stage=1; //ステージ番号
+unsigned int StartTime;
 
 //関数プロトタイプ宣言
 double GetFPS(); 
@@ -109,10 +110,20 @@ double GetFPS(){
 	return result;
 }
 
+void InitTimer(){
+	StartTime=GetNowCount();
+}
+
+bool  isTimePassed(unsigned int TimerValue){
+	TimerValue*=1000;
+	if(GetNowCount()-StartTime >=  TimerValue) return true; else return false;
+}
+
 void SetColor(){
 	Cred = GetColor(200,0,0);
 	Cblack = GetColor(0,0,0);
-	Cblue = GetColor(0,200,0);
+	Cblue = GetColor(0,0,200);
+	Cgreen = GetColor(0,200,0);
 	Cwhite = GetColor(255,255,255);
 }
 

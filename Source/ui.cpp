@@ -5,9 +5,11 @@ ui.cpp
 
 */
 
-
-
 #include "common.h"
+
+namespace chara{
+	extern jiki_t jiki;
+}
 
 typedef struct{
 	char name[20];
@@ -84,4 +86,21 @@ void ShowNobel(){
 	default:
 		break;
 	}
+}
+
+void DrawWeaponCircle(int posx,int posy,double rotate_angle, int sel_weap){
+	static bool isStop;
+	if (rotate_angle==sel_weap*90) isStop=true; else isStop=false;
+	rotate_angle=(rotate_angle+225)*PI/180;
+	posx+=80;
+	int hankei=50;
+
+	DrawCircle(posx,posy,10,Cwhite,false);
+
+
+	DrawCircle(posx,posy,hankei,Cwhite,false);
+	if(sel_weap==0 && isStop==true){ DrawCircle(posx+hankei*cos(rotate_angle),posy-hankei*sin(rotate_angle),40,Cwhite,false); } else {DrawCircle(posx+hankei*cos(rotate_angle),posy-hankei*sin(rotate_angle),20,Cwhite,false);}
+	if(sel_weap==1 && isStop==true){ DrawCircle(posx+hankei*cos(rotate_angle-0.5*PI),posy-hankei*sin(rotate_angle-0.5*PI),40,Cred,false); } else { DrawCircle(posx+hankei*cos(rotate_angle-0.5*PI),posy-hankei*sin(rotate_angle-0.5*PI),20,Cred,false); }
+	if(sel_weap==2 && isStop==true){ DrawCircle(posx+hankei*cos(rotate_angle-1*PI),posy-hankei*sin(rotate_angle-1*PI),40,Cblue,false); } else { DrawCircle(posx+hankei*cos(rotate_angle-1*PI),posy-hankei*sin(rotate_angle-1*PI),20,Cblue,false); }
+	if(sel_weap==3 && isStop==true){ DrawCircle(posx+hankei*cos(rotate_angle-1.5*PI),posy-hankei*sin(rotate_angle-1.5*PI),40,Cgreen,false); } else { DrawCircle(posx+hankei*cos(rotate_angle-1.5*PI),posy-hankei*sin(rotate_angle-1.5*PI),20,Cgreen,false); }
 }

@@ -19,6 +19,8 @@ common.h
 
 #include "stage1.h"
 
+#define PI 3.141592
+
 //弾クラス
 typedef struct{
 	float x;
@@ -45,6 +47,7 @@ typedef struct{
 	int x,y;
 	int speed;
 	life_t life;
+	int weap;
 	bool ahantei; //当たり判定表示フラグ
 	bool damage; //ダメージフラグ
 }jiki_t;

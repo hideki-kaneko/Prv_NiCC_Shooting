@@ -23,7 +23,7 @@ namespace chara{
 	bullet_t tmb[200]; //弾移動
 	bullet_t jb[200]; //自機弾
 	bullet_t jmb[200]; //使ってない
-	jiki_t jiki={320,400,4,5,5,false,false};
+	jiki_t jiki={320,400,4,5,5,0,false,false};
 	teki_t boss[20]={
 		{320,30,100,100,false},
 	};
@@ -48,6 +48,7 @@ void JikiDamage(int DamageValue);
 
 //メインループ---------------------------------
 int main(){
+
 	DrawGraph(0,0,graph::back[0],true);
 
 	if(talkphase==true){
@@ -62,6 +63,7 @@ int main(){
 		JikiDamage(1);
 		jiki.damage=true;
 		shield.isDamage=true;
+		InitTimer();
 	}else{
 		jiki.damage=false;
 		shield.isDamage=false;
@@ -98,9 +100,22 @@ void Draw(){
 	} else DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[0],true);
 	
 	//シールド
+
+	static bool isChargeTime=false;
+	if(isChargeTime==false){
+		InitTimer();
+		isChargeTime=true;
+	}
+	
+	if(isTimePassed(5)==true){
+		if(shield.life.now!=shield.life.max) shield.life.now+=1;
+		isChargeTime=false;
+	}
+
 	if(shield.life.now > 0){
 		if(shield.isDamage==false){
 			DrawCircle(jiki.x,jiki.y,70,GetColor(255-255*(float)shield.life.now/(float)shield.life.max,0,0+255*(float)shield.life.now/(float)shield.life.max),false);
+			DrawFormatString(0,20,Cwhite,"%d",shield.life.now);
 		} else {
 			DrawCircle(jiki.x,jiki.y,68,Cwhite,false);
 		}
@@ -115,10 +130,65 @@ void Draw(){
 		DrawCircle(jiki.x,jiki.y,2,Cred,true);
 	}
 
+	//武器切り替え
+	DrawFormatString(jiki.x-40,jiki.y+40,Cwhite,"WEAP:%d",jiki.weap);
+
+	if(key[KEY_INPUT_LCONTROL]==1){
+		static bool past_pushed;
+		static double pangle=0;
+		static int rotate_flag; //0=NO 1=LEFT 2=RIGHT
+
+		if(key[KEY_INPUT_LEFT]==1){
+			if(past_pushed==false){
+				past_pushed=true;
+				jiki.weap+=1;
+				jiki.weap=jiki.weap%4;
+				rotate_flag=1;
+			}
+		} else if(key[KEY_INPUT_RIGHT]==1){
+			if(past_pushed==false){
+				past_pushed=true;
+				jiki.weap-=1;
+				if(jiki.weap<0) jiki.weap=3;
+				jiki.weap=jiki.weap%4;
+				rotate_flag=2;
+			}
+		} else {
+			past_pushed=false;
+		}
+
+		if(rotate_flag==0){
+			DrawWeaponCircle(jiki.x,jiki.y,jiki.weap*90,jiki.weap);
+		}
+
+		if(rotate_flag==1){
+			if(pangle<=90){
+				DrawWeaponCircle(jiki.x,jiki.y,(jiki.weap-1)*90+pangle,jiki.weap);
+				pangle+=10;
+			}
+			if(pangle==90){
+				pangle=0;
+				rotate_flag=0;
+			}
+		}
+
+		if(rotate_flag==2){
+			if(pangle>=-90){
+				DrawWeaponCircle(jiki.x,jiki.y,(jiki.weap+1)*90+pangle,jiki.weap);
+				pangle-=10;
+			}
+			if(pangle==-90){
+				pangle=0;
+				rotate_flag=0;
+			}
+		}
+
+	}
+
 	//弾
 	for(int i=0;i<200;i++){
 		if(tb[i].avail==true){
-			DrawCircle(tb[i].x,tb[i].y,3,Cblue,true);
+			DrawCircle(tb[i].x,tb[i].y,3,Cgreen,true);
 		}
 	}
 	for(int i=0;i<200;i++){
@@ -151,24 +221,27 @@ void Draw(){
 
 void Move(){
 	//自機移動
-	if(key[KEY_INPUT_LSHIFT]==1){
-		jiki.speed=3;
-		jiki.ahantei=true;
-	}else{
-		jiki.speed=6;
-		jiki.ahantei=false;
-	}
-	if(key[KEY_INPUT_LEFT]==1){
-		jiki.x-=jiki.speed;
-	}
-	if(key[KEY_INPUT_RIGHT]==1){
-		jiki.x+=jiki.speed;
-	}
-	if(key[KEY_INPUT_UP]==1){
-		jiki.y-=jiki.speed;
-	}
-	if(key[KEY_INPUT_DOWN]==1){
-		jiki.y+=jiki.speed;
+
+	if(key[KEY_INPUT_LCONTROL]==0){
+		if(key[KEY_INPUT_LSHIFT]==1){
+			jiki.speed=3;
+			jiki.ahantei=true;
+		}else{
+			jiki.speed=6;
+			jiki.ahantei=false;
+		}
+		if(key[KEY_INPUT_LEFT]==1){
+			jiki.x-=jiki.speed;
+		}
+		if(key[KEY_INPUT_RIGHT]==1){
+			jiki.x+=jiki.speed;
+		}
+		if(key[KEY_INPUT_UP]==1){
+			jiki.y-=jiki.speed;
+		}
+		if(key[KEY_INPUT_DOWN]==1){
+			jiki.y+=jiki.speed;
+		}
 	}
 	
 	//敵移動
@@ -275,6 +348,7 @@ void var_init(){
 }
 
 void JikiDamage(int dmg){
+
 	if(shield.life.now-dmg <= 0){
 		jiki.life.now-=dmg-shield.life.now;
 		shield.life.now=0;
