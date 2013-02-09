@@ -3,7 +3,7 @@
 //グローバル変数
 namespace graph{
 	int chara[50];
-	int hdmaru[3];
+	int hdmaru[10];
 	int compterve;
 	int textbox;
 	int back[10];
@@ -15,16 +15,17 @@ void LoadGraphics(){
 	textbox=LoadGraph("res\\gui\\wakuwaku.png");
 	
 	//background
-	back[0]=LoadGraph("res\\background\\back_beta.png");
+	back[0]=LoadGraph("res\\background\\background.png");
 
 	//craft
-	hdmaru[0]=LoadGraph("res\\craft\\hodakamaru.png");
-	hdmaru[1]=LoadGraph("res\\craft\\hodakamaru_left.png");
-	hdmaru[2]=LoadGraph("res\\craft\\hodakamaru_right.png");
+	hdmaru[0]=LoadGraph("res\\craft\\super_hodakamaru_blue3.png");
+	hdmaru[1]=LoadGraph("res\\craft\\super_hodakamaru_blue3.png");
+	hdmaru[2]=LoadGraph("res\\craft\\super_hodakamaru_blue3.png");
+	hdmaru[3]=LoadGraph("res\\craft\\super_hodakamaru_blue2.png");
 	compterve=LoadGraph("res\\craft\\COM_P_TERVE_03.png");
 
 	//character
-	chara[0]=LoadGraph("res\\null_i.png");
+	chara[0]=LoadGraph("res\\chara\\renkon.png");
 	chara[1]=LoadGraph("res\\jorry_t.png");
 	chara[2]=LoadGraph("res\\muri.png");
 

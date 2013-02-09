@@ -94,11 +94,14 @@ void Draw(){
 	}
 	//自機
 	if(key[KEY_INPUT_LEFT]==1){
-		DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[1],true);
+		DrawGraph(jiki.x-48,jiki.y-48,graph::hdmaru[1],true);
 	} else if(key[KEY_INPUT_RIGHT]==1){
-		DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[2],true);
-	} else DrawGraph(jiki.x-50,jiki.y-50,graph::hdmaru[0],true);
-	
+		DrawGraph(jiki.x-48,jiki.y-48,graph::hdmaru[2],true);
+	} else DrawGraph(jiki.x-48,jiki.y-48,graph::hdmaru[0],true);
+	if(key[KEY_INPUT_Z]==1){
+		DrawGraph(jiki.x-48,jiki.y-48,graph::hdmaru[3],true);
+	}
+
 	//シールド
 
 	static bool isChargeTime=false;
@@ -115,7 +118,6 @@ void Draw(){
 	if(shield.life.now > 0){
 		if(shield.isDamage==false){
 			DrawCircle(jiki.x,jiki.y,70,GetColor(255-255*(float)shield.life.now/(float)shield.life.max,0,0+255*(float)shield.life.now/(float)shield.life.max),false);
-			DrawFormatString(0,20,Cwhite,"%d",shield.life.now);
 		} else {
 			DrawCircle(jiki.x,jiki.y,68,Cwhite,false);
 		}
@@ -132,6 +134,12 @@ void Draw(){
 
 	//武器切り替え
 	DrawFormatString(jiki.x-40,jiki.y+40,Cwhite,"WEAP:%d",jiki.weap);
+
+	if(key[KEY_INPUT_X]==1){
+		static bool past_pushed=1;
+	} else {
+
+	}
 
 	if(key[KEY_INPUT_LCONTROL]==1){
 		static bool past_pushed;
