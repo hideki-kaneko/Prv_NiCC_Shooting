@@ -65,6 +65,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 		//main関数を呼び出し、返り値が0以外なら何か実行
 		switch(main()){
 		case 1:
+			DrawGraph(300,10,graph::chara[2],true);
 			DrawFormatString(320,200,GetColor(255,255,255),"死んだ");
 			ScreenFlip();
 			WaitKey();
@@ -72,6 +73,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine
 			goto start;
 			break;
 		case 2:
+			DrawGraph(300,10,graph::chara[1],true);
 			DrawFormatString(320,220,GetColor(255,255,255),"すごい");
 			ScreenFlip();
 			WaitKey();

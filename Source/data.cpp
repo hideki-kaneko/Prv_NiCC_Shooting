@@ -26,7 +26,7 @@ void LoadGraphics(){
 
 	//character
 	chara[0]=LoadGraph("res\\chara\\renkon.png");
-	chara[1]=LoadGraph("res\\jorry_t.png");
-	chara[2]=LoadGraph("res\\muri.png");
+	chara[1]=LoadGraph("res\\chara\\renkon2.png");
+	chara[2]=LoadGraph("res\\chara\\renkon_fail.png");
 
 }
